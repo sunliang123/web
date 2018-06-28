@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="css/toastr.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/lib/jquery.min.js" /></script>
+		<script type="text/javascript" src="js/lib/bootstrap.min.js" /></script>
+		<script type="text/javascript" src="js/lib/formValidation.popular.js"></script>
+		<script type="text/javascript" src="js/lib/formValidation.bootstrap.js" /></script>
+		<script type="text/javascript" src="js/lib/formValidator.js"></script>
+		<script type="text/javascript" src="js/lib/toastr.js"></script>
+		<script type="text/javascript" src="js/lib/underscore.min.js"></script>
+		<script type="text/javascript" src="js/lib/bootstrap-dialog.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/write/head.js"></script>
+		<script type="text/javascript" src="js/lib/cropper.min.js"></script>
+		<script src="js/lib/jquery-migrate-1.2.1.min.js"></script>
+		<script src="js/lib/jqprint-0.3.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="cont">
+			<div class="main-body">
+				<header>
+					<nav class="navbar navbar-inverse noradius nav-index">
+						<div class="container">
+							<div>
+								<em class="navbar-brand-index welcome hidden-xs">
+					<span id="name"></span>
+					<a href="/personal.html"><span class="companyName"></span></a> 
+				</em>
+								<em class="navbar-brand-index welcome hidden-md hidden-sm hidden-lg">您好，尹岳峰</em>
+								<ul class="nav navbar-nav menu-function">
+									<li class="dropdown-nav">
+										<a href="#" class="logout">安全退出</a>
+									</li>
+								</ul>
+							</div>
+
+						</div>
+					</nav>
+				</header>
+				<div class="header">
+					<div class="container container-nopd">
+						<a href="/home.html" class="system-logo"><img src="img/logo-home.jpg" width="116px"></a>
+						<ul class="sys-nav">
+							<li class="">
+								<a href="/home.html">扫码入职</a><em class="hidden-xs"></em></li>
+							<li class="">
+								<a href="/report.html">筛查报告</a>
+							</li>
+							<li class="">
+								<a href="/team.html">职员管理</a>
+							</li>
+						</ul>
+						<ul class="sys-nav sys-nav-mg pull-right">
+							<li class="pull-right hidden">
+								<a href="/work" class="btn btn-style btn-default btn-xs hidden-xs pull-left btn-orange">　快入职　</a>
+							</li>
+							<li class="pull-right hidden">
+								<a href="/work" class="btn btn-style btn-xs hidden-xs pull-left btn-orange">快入职</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="container box">
+
+					<div class="row">
+
+						<div class="col-md-9 col-md-offset-1">
+
+							<div class="panel panel-default panel-report">
+
+								<div class="panel-heading">入职表</div>
+
+								<div class="container-fluid-report" id="div-print">
+									<div class="panel-body report report-div">
+
+										<div class="cv-box-prove text-center">
+											<div class="row">
+												<div class="col-md-12">
+													<em class="pull-left cv-last">深圳忠信信息技术有限公司</em>
+											<em class="pull-center">新员工入职表</em>
+											<em class="pull-right cv-last">表单编号：02151</em>
+											
+											</div>
+											</div>
+										</div>
+										<div class="prove-title">
+											基本信息
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+
+												<div class="prove-fy">
+													<table border="0" cellspacing="0" cellpadding="0">
+														<tbody>
+
+															<tr>
+																<th class="tit">姓名</th>
+																<td class="tit">江心屿</td>
+																<th class="tit">性别</th>
+																<td class="tit">男</td>
+																<th class="tit">民族</th>
+																<td class="tit">否</td>
+																<th style="width: 100px;" rowspan="4"><img width="80px" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523614764304&di=a7a56718de5e3fe75e7740348238c0d6&imgtype=0&src=http%3A%2F%2Fwww.qjfysy.com%2Fupload%2Fimage%2F20170919063627_35455.jpg"></th>
+															</tr>
+															<tr>
+																<th class="tit">现籍</th>
+																<td class="tit"></td>
+																<th class="tit">籍贯</th>
+																<td class="tit"></td>
+																<th class="tit">婚否</th>
+																<td class="tit"></td>
+															</tr>
+
+															<tr>
+																<th class="tit">出生年月</th>
+																<td class="tit"></td>
+																<th class="tit">联系电话</th>
+																<td class="tit"></td>
+																<th class="tit">所在城市</th>
+																<td class="tit"></td>
+
+															</tr>
+
+															<tr>
+																<th class="tit">政治面貌</th>
+																<td class="tit"></td>
+																<th class="tit">健康状况</th>
+																<td class="tit"></td>
+																<th class="tit">入职日期</th>
+																<td class="tit"></td>
+
+															</tr>
+															<tr>
+																<th class="tit">入职部门</th>
+																<td class="tit"></td>
+																<th class="tit">入职岗位</th>
+																<td class="tit"></td>
+																<th class="tit">薪资待遇</th>
+																<td colspan="2" class="tit"></td>
+
+															</tr>
+															<tr>
+																<th class="tit">身份证号</th>
+																<td class="tit"></td>
+																<th class="tit">住址</th>
+																<td colspan="4" class="tit"></td>
+															</tr>
+
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+
+										<div class="prove-title">
+											紧急联系人
+										</div>
+
+										<div class="row">
+											<div class="col-md-12">
+
+												<div class="prove-fy">
+													<table border="0" cellspacing="0" cellpadding="0">
+														<tbody>
+															<tr>
+																<th class="tit">关系</th>
+																<th class="tit">姓名</th>
+																<th class="tit">联系电话</th>
+																<th class="tit">详细地址</th>
+															</tr>
+															<tr>
+																<td><span><input type="text" disabled="disabled"></span></td>
+																<td><span><input type="text" disabled="disabled"></span></td>
+																<td><span><input type="text" disabled="disabled"></span></td>
+																<td><span><input type="text" disabled="disabled"></span></td>
+															</tr>
+
+														</tbody>
+													</table>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="prove-title">
+											教育经历<i>（最高学历为必填项，次高或双学历为自主添加项）</i>
+										</div>
+
+										<div class="row">
+											<div class="col-md-12">
+
+												<div class="prove-fy">
+													<table border="0" cellspacing="0" cellpadding="0">
+														<tbody>
+															<tr>
+																<th class="tit">就读日期</th>
+																<th class="tit">结束日期</th>
+																<th class="tit">学校</th>
+																<th class="tit">专业</th>
+																<th class="tit">学历</th>
+																<th class="tit">学习方式</th>
+															</tr>
+															<tr>
+																<td><span><input type="text" disabled="disabled"></span></td>
+																<td><span><input type="text" disabled="disabled"></span></td>
+																<td><span><input type="text" disabled="disabled"></span></td>
+																<td><span><input type="text" disabled="disabled"></span></td>
+																<td><span><input type="text" disabled="disabled"></span></td>
+																<td><span><input type="text" disabled="disabled"></span></td>
+															</tr>
+
+														</tbody>
+													</table>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="prove-title">
+											工作经历<i>(最近经历为必填项，前延经历为自主添加项)</i>
+										</div>
+
+										<div class="row">
+											<div class="col-md-12">
+
+												<div class="prove-fy">
+													<table border="0" cellspacing="0" cellpadding="0">
+														<tbody>
+															<tr>
+																<th class="tit">就读日期</th>
+																<th class="tit">结束日期</th>
+																<th class="tit">单位全称</th>
+																<th class="tit">所在部门</th>
+																<th class="tit">任职岗位</th>
+																<th class="tit">离职方式</th>
+															</tr>
+															<tr>
+																<td><span><input type="text" disabled="disabled"></span></td>
+																<td><span><input type="text" disabled="disabled"></span></td>
+																<td><span><input type="text" disabled="disabled"></span></td>
+																<td><span><input type="text" disabled="disabled"></span></td>
+																<td><span><input type="text" disabled="disabled"></span></td>
+																<td><span><input type="text" disabled="disabled"></span></td>
+															</tr>
+
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-md-12">
+												<div class="prove-exp">
+													<h2>承诺及授权</h2>
+													<p>本人承诺以上所填资料真实有效，因此导致的一切后果由本人承担，同时授权 <b>深圳忠信信息技术有限公司</b> 对以上所涉及信息进行核实，如有虚假，单位有权处理。
+													</p>
+
+													<span>本人签名：<input value="江心屿" type="text" disabled="disabled"></span>
+												</div>
+											</div>
+										</div>
+
+										<div class="prove-title">
+											入职来源（以下为企业书面填写内容）
+										</div>
+										
+										<div class="row">
+											<div class="col-md-12">
+												
+												<div class="col-md-5ths col-xs-5ths">☐ 社会招聘</div>
+												<div class="col-md-5ths col-xs-5ths">☐ 校园招聘</div>
+												<div class="col-md-5ths col-xs-5ths">☐ 内部招聘</div>
+												<div class="col-md-5ths col-xs-5ths">☐ 定向培养</div>
+												<div class="col-md-5ths col-xs-5ths">☐ 派遣外包</div>
+												</div>
+										</div>
+										
+										
+										<div class="prove-title">
+											入职审批
+										</div>
+										
+										<div class="cv-box-prove text-center">
+											<em class="cv-last pull-left">批准：</em><em class="cv-last pull-center">审核：</em><em class="cv-last pull-right">人事：　　　　　</em>
+										</div>
+										
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-1">
+							<div class="panel panel-default panel-report">
+
+								<div class="panel-heading text-center">操作</div>
+								<div class="row panel-body text-center report-do">
+
+									<a class="text-green" onclick="print()" href="javascript:;">打印<br>报告</a>
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+			<div class="foot-nav ">
+				<footer>
+					<div class="container "><em class="pull-left">注册单位统计：1022</em><em class="pull-right ">忠信信息技术有限公司© <a target="_blank" href="http://icp.chinaz.com/info?q=zxcioc.com">粤ICP备16003933号-2</a></em></div>
+				</footer>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/write/personal.js"></script>
+
+		<script language="javascript">
+			//			调用打印
+			function print() {
+				$("#div-print").jqprint();
+			}
+		</script>
+	</body>
+
+</html>

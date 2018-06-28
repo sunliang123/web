@@ -1,0 +1,5 @@
+require('../css/bootstarp.min.css')
+require('../css/font-awesome.min.css')
+require('../css/index.css')
+// require('../css/layui.css')
+require('../css/style.css')

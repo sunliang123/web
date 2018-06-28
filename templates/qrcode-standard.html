@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>扫码入职</title>
+		<link rel="shortcut icon" href="http://avatar.zxcioc.com/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/lib/jquery.min.js" /></script>
+		<script type="text/javascript" src="js/lib/bootstrap.min.js" /></script>
+		<script type="text/javascript" src="js/lib/formValidation.popular.js"></script>
+		<script type="text/javascript" src="js/lib/formValidation.bootstrap.js" /></script>
+		<script type="text/javascript" src="js/lib/formValidator.js"></script>
+		<script type="text/javascript" src="js/lib/underscore.min.js"></script>
+		<script type="text/javascript" src="js/lib/bootstrap-dialog.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/write/head.js"></script>
+		<script src="js/lib/jquery-migrate-1.2.1.min.js"></script>
+		<script src="js/lib/jqprint-0.3.js"></script>
+		<script type="text/javascript" src="js/write/qrcode.standard.js"></script>
+	</head>
+
+	<body style="overflow: auto;">
+
+		<div class="cont">
+			<div class="main-body">
+
+				<header>
+					<nav class="navbar navbar-inverse noradius nav-index">
+						<div class="container">
+							<div>
+								<em class="navbar-brand-index welcome hidden-xs">
+					<span id="name"></span>
+					<a href="/company.html"><span class="companyName"></span></a> 
+				</em>
+								<em class="navbar-brand-index welcome hidden-md hidden-sm hidden-lg">您好，尹岳峰</em>
+								<ul class="nav navbar-nav menu-function">
+									<li class="dropdown-nav">
+										<a href="#" class="logout">安全退出</a>
+									</li>
+								</ul>
+							</div>
+
+						</div>
+					</nav>
+				</header>
+				<div class="header">
+					<div class="container container-nopd">
+						<a href="/home.html" class="system-logo"><img src="img/logo-home.jpg" width="116px"></a>
+						<ul class="sys-nav">
+							<li class="active">
+								<a href="/company.html">扫码入职</a><em class="hidden-xs"></em></li>
+							<li class="">
+								<a href="/report.html">筛查报告</a>
+							</li>
+							<li class="">
+								<a href="/team.html">职员管理</a>
+							</li>
+						</ul>
+						<ul class="sys-nav sys-nav-mg pull-right">
+							<li class="pull-right hidden">
+								<a href="/work" class="btn btn-style btn-default btn-xs hidden-xs pull-left btn-orange">　快入职　</a>
+							</li>
+							<li class="pull-right hidden">
+								<a href="/work" class="btn btn-style btn-xs hidden-xs pull-left btn-orange">快入职</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="container box">
+
+					<div style="width: 846px; margin: 0 auto;">
+						<a href="/qrcode-basic.html" class="btn btn-default btn-xs hidden-xs pull-left"><b>基础版</b><br>适用于蓝领工人</a>
+						<a href="/qrcode-standard.html" class="btn btn-default btn-xs hidden-xs pull-left btn-orange"><b>标准版</b><br>适用于白领职员</a>
+						<a href="/qrcode-senior.html" class="btn btn-default btn-xs hidden-xs pull-left"><b>高级版</b><br>适用于金领高管</a>
+						<a href="javascript:;" onclick="print()" class="btn btn-info btn-xs hidden-xs pull-right"><span class="fa fa-cloud-download"> 打印<br />引导</span></a>
+						<div class="clearfix"></div><br>
+						<div class="panel panel-default">
+							<div class="panel-body print-abox" id="div-print">
+								<div class="row" style="border-bottom: 2px solid #dedede;margin-top: 40px;height:62px">
+
+									<div class="col-md-6 report-tit"><em class="sm companyName"></em></div>
+									<div class="col-md-6 text-right reportId">扫码入职操作指引</div>
+								</div>
+								<div class="col-md-12">
+									<br /><br />
+									<img src="img/print.jpg" width="100%" style="position: relative;">
+									<div style="position: absolute;right: 160px; bottom: 14%; width: 140px; height: 140px;"><img id="standard" width="100%"></div>
+									<br />
+									<br />
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="foot-nav">
+				<footer>
+					<div class="container "><em class="pull-left">注册单位统计：1022</em><em class="pull-right ">忠信信息技术有限公司© <a target="_blank" href="http://icp.chinaz.com/info?q=zxcioc.com">粤ICP备16003933号-2</a></em></div>
+				</footer>
+			</div>
+		</div>
+		<script language="javascript">
+			//			调用打印
+			function print() {
+				$("#div-print").jqprint();
+			}
+		</script>
+
+	</body>
+
+</html>

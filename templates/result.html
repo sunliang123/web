@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="shortcut icon" href="http://avatar.zxcioc.com/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="css/bootstrap-dialog.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-datepicker3.min.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/lib/jquery.min.js"/></script>
+		<script type="text/javascript" src="js/lib/bootstrap.min.js"/></script>
+		<script type="text/javascript" src="js/lib/bootstrap-datepicker.min.js"/></script>
+		<script type="text/javascript" src="js/lib/underscore.min.js"></script>
+		<script type="text/javascript" src="js/lib/bootstrap-dialog.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/write/head.js"></script>
+		<script src="js/lib/jquery-migrate-1.2.1.min.js"></script>
+		<script src="js/lib/jqprint-0.3.js"></script>
+		<script type="text/javascript" src="js/write/result.js"></script>
+	</head>
+
+	<body>
+
+		<div class="cont">
+			<div class="main-body">
+				<header>
+					<nav class="navbar navbar-inverse noradius nav-index">
+						<div class="container">
+							<div>
+								<em class="navbar-brand-index welcome hidden-xs">
+					<span id="name"></span>
+					<!-- <span id="dqrName"></span> -->
+					<input type="hidden" name="dqrName" />
+					<input type="hidden" name="dqCompanyName" />
+					<a href="/personal.html"><span class="companyName"></span></a>
+				</em>
+								<em class="navbar-brand-index welcome hidden-md hidden-sm hidden-lg">您好，尹岳峰</em>
+								<ul class="nav navbar-nav menu-function">
+									<!-- <li class="dropdown-nav">
+										<a href="/message">您有0条未读消息</a>
+									</li> -->
+									<li class="dropdown-nav">
+										<a class="logout">安全退出</a>
+									</li>
+
+								</ul>
+							</div>
+
+						</div>
+					</nav>
+				</header>
+				<div class="header">
+					<div class="container container-nopd">
+						<a href="/home.html" class="system-logo"><img src="img/logo-home.jpg" width="116px"></a>
+						<ul class="sys-nav">
+							<li>
+								<a href="/home.html">扫码入职</a><em class="hidden-xs"></em></li>
+							<li class="active">
+								<a href="/report.html">筛查报告</a>
+							</li>
+							<li>
+								<a href="/team.html">职员管理</a>
+							</li>
+						</ul>
+						<ul class="sys-nav sys-nav-mg pull-right">
+							<li class="pull-right hidden">
+								<a href="/work" class="btn btn-style btn-default btn-xs hidden-xs pull-left btn-orange">　快入职　</a>
+							</li>
+							<li class="pull-right hidden">
+								<a href="/work" class="btn btn-style btn-xs hidden-xs pull-left btn-orange">快入职</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="container container-report box">
+					<p class="text-center hidden-xs" style="color:red;margin: 20px 0 25px 0;">提示：为避免信息泄露，本报告持续显示七天，请尽快打印存档备份</p>
+					<div class="row col-md-9 col-md-offset-1">
+						
+						<div class="panel panel-default panel-report">
+							<div class="panel-heading hidden">报告列表 > 报告详情</div>
+							<div class="container-fluid-report" id="div-print">
+								<div class="panel-body report report-div">
+									
+									<div class="row" style="border-bottom: 2px solid #dedede;margin-top: 40px;height:62px">
+										
+										<div class="col-md-6 report-tit"><img src="img/report-logo.png" width="120px"><em id="banben">|入职筛查报告</em></div>
+										<div class="col-md-6 text-right reportId"></div>
+									</div>
+
+									<!--身份信息-->
+									<div class="quit-box quit-box-line">
+										<a class="quit-line-tit"><img class="hidden-xs" src="img/report-tit.jpg"><img class="hidden visible-xs" src="img/report-tit-xs.jpg"><em>身份信息</em></a>
+										<div class="row">
+											<div class="col-md-8 col-xs-8 quit-txt" id="isPerson">
+												<p id="xm">姓名：</p>
+												<p id="xb">性别：</p>
+												<p id="csny">出生年月：</p>
+												<p id="sfz">身份证号：</p>
+												<p id="jgdz">籍贯地址：</p>
+											</div>
+											<div class="col-md-3 col-xs-3 col-md-offset-1" data-tx="headImg"><img style="padding-bottom: 5px;margin-top: 15%;" src="" width="140px"><p id="zhscore"></p></div>
+										</div>
+										<!--一致 -->
+										<div id="a" data-name="personYZ" class="hidden result result-suc"><i class="fa fa-check-circle" aria-hidden="true"></i> 姓名及证件号比对一致</div>
+										<!-- 不一致 -->
+										<div id="a" data-name="personNYZ" class="hidden result result-fail"><i class="fa fa-question-circle" aria-hidden="true"></i> 姓名及证件号比对不一致</div>
+									</div>
+
+									<!--通讯信息-->
+
+									<div class="quit-box quit-box-line">
+										<a class="quit-line-tit"><img class="hidden-xs" src="img/report-tit.jpg"><img class="hidden visible-xs" src="img/report-tit-xs.jpg"><em>手机实名</em></a>
+										<div class="row">
+											<div class="col-md-6 quit-txt">
+												<p id="sjh">手机号：</p>
+											</div>
+											<div id="gsd" class="col-md-6 quit-txt">
+												<p>归属地：</p>
+											</div>
+										</div>
+										<div id="b" data-name="mobileY" class="hidden result result-suc"><i class="fa fa-check-circle" aria-hidden="true"></i> 手机号已实名</div>
+										<div id="b" data-name="mobileN" class="hidden result result-fail"><i class="fa fa-question-circle" aria-hidden="true"></i> 手机实名不一致</div>
+									</div>
+
+									<!--最高学历-->
+									<div class="quit-box quit-box-line hidden" data-name="eductionY">
+										<a class="quit-line-tit"><img class="hidden-xs" src="img/report-tit.jpg"><img class="hidden visible-xs" src="img/report-tit-xs.jpg"><em>最高学历</em></a>
+										<div class="row">
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p id="byxx">毕业学校：</p>
+												<p id="rxnf">入学年份：</p>
+												<p id="xllx">学历类型：</p>
+												<p id="isjyb">985： 
+													<!--否-->
+												</p>
+												<p id="xl">学历：</p>
+												<p id="byjl">毕业结论：</p>
+												<p id="yxxz">院校性质：</p>
+												<p id="ylxx">一流学校： 
+													<!--否-->
+												</p>
+											</div>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p id="yxwz">院校网址：</p>
+												<p id="bysj">毕业时间：</p>
+												<p id="cc">层次：</p>
+												<p id="iseyy">211：
+												</p>
+												<p id="zy">专业：</p>
+												<p id="szcs">所在城市：</p>
+												<p id="bmzg">主管部门：</p>
+												<p id="ylxk">一流学科：</p>
+											</div>
+										</div>
+										<div id="c" data-name="highest" class="result result-suc"></div>
+									</div>
+
+									<!-- 无学历情况-->
+									<div class="quit-box quit-box-line hidden" data-name="eductionN">
+										<a class="quit-line-tit"><img class="hidden-xs" src="img/report-tit.jpg"><img class="hidden visible-xs" src="img/report-tit-xs.jpg"><em>最高学历</em></a>
+										
+										<div id="c" class="result result-suc result-care"><i class="fa fa-check-circle" aria-hidden="true"></i> 国家数据库中暂未查得学历信息！</div>
+									</div>
+
+									<!--证书查询 -->
+
+									<!--有证书情况-->
+									<div class="quit-box quit-box-line hidden" data-name="ostainY">
+										<!-- <a class="quit-line-tit"><img class="hidden-xs" src="img/report-tit.jpg"><img class="hidden visible-xs" src="img/report-tit-xs.jpg"><em>资格证书</em></a>
+
+										<div class="row">
+											<p class="quit-txt"><b>证书详情</b></p>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>证书编号：110</p>
+												<p>全国月平均工资：110元</p>
+												<p>发证机构：110</p>
+											</div>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>职业名称：110</p>
+												<p>发证日期：110</p>
+												<p>级别：110</p>
+											</div>
+										</div>
+										<br />
+										
+										<div class="row">
+											<div class="col-md-5ths col-xs-5ths">
+												<div class="certificate"><img src="img/certificate-in.jpg"></div>
+											</div>
+											<div class="col-md-5ths col-xs-5ths">
+												<div class="certificate"><img src="img/certificate-in.jpg"></div>
+											</div>
+											<div class="col-md-5ths col-xs-5ths">
+												<div class="certificate"><img src="img/certificate.jpg"></div>
+											</div>
+											<div class="col-md-5ths col-xs-5ths">
+												<div class="certificate"><img src="img/certificate.jpg"></div>
+											</div>
+											<div class="col-md-5ths col-xs-5ths">
+												<div class="certificate"><img src="img/certificate.jpg"></div>
+											</div>
+										</div>
+										<div id="d" class="result result-suc"><i class="fa fa-check-circle" aria-hidden="true"></i> 当前已查得三项证书</div> -->
+									</div>
+
+									<!--无证书情况-->
+									<div class="quit-box quit-box-line hidden" data-name="ostainN">
+										<a class="quit-line-tit"><img class="hidden-xs" src="img/report-tit.jpg"><img class="hidden visible-xs" src="img/report-tit-xs.jpg"><em>资格证书</em></a>
+										
+										<div id="d" class="result result-suc result-care"><i class="fa fa-check-circle" aria-hidden="true"></i> 国家数据库中暂未查得证书信息！</div>
+									</div>
+
+									<!--工商投资-->
+									<div class="quit-box quit-box-line hidden" data-name="enterpriseY">
+										<!-- <a class="quit-line-tit"><em>工商投资</em></a>
+										<div class="row" >
+											<p class="quit-txt"><b>企业股东</b></p>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>查询人姓名：110</p>
+												<p>注册号：110</p>
+												<p>企业状态：110</p>
+												<p>注册资本(万元)：110</p>
+												<p>认缴出资额(万元)：110</p>
+											</div>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>企业(机构)名称：110</p>
+												<p>企业(机构)类型：110</p>
+												<p>注册资本币种：110</p>
+												<p>认缴出币种：110</p>
+											</div>
+										</div>
+										<br/>
+										<div class="row">
+											<p class="quit-txt"><b>企业主要管理人员</b></p>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>查询人姓名：110</p>
+												<p>注册号：110</p>
+												<p>注册资本(万元)：110</p>
+												<p>企业状态：110</p>
+											</div>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>企业(机构)名称：110</p>
+												<p>企业(机构)类型：110</p>
+												<p>注册资本币种：110</p>
+												<p>职务：110</p>
+											</div>
+										</div>
+										<br/>
+										<div class="row">
+											<p class="quit-txt"><b>企业法定代表人</b></p>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>查询人姓名：110</p>
+												<p>注册号：110</p>
+												<p>注册资本(万元)：110</p>
+												<p>企业状态：110</p>
+											</div>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>企业(机构)名称：110</p>
+												<p>企业(机构)类型：110</p>
+												<p>注册资本币种：110</p>
+											</div>
+										</div>
+										<br/>
+										<div class="row">
+											<p class="quit-txt"><b>行政处罚历史记录</b></p>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>案发时间：110</p>
+												<p>案由：110</p>
+												<p>案值：110</p>
+												<p>案件类型：110</p>
+												<p>执行类别：110</p>
+												<p>案件结果：110</p>
+												<p>处罚决定文书：110</p>
+												<p>处罚决定书签发日期：110</p>
+												<p>做出行政处罚决定机关名：110</p>
+											</div>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>主要违法事实：110</p>
+												<p>处罚依据：${caseInfo.penBasis!'--'}</p>
+												<p>处罚种类：${caseInfo.penType!'--'}</p>
+												<p>处罚结果：${caseInfo.penResult!'--'}</p>
+												<p>处罚金额：${caseInfo.penAm!'--'}</p>
+												<p>处罚执行情况：${caseInfo.penExeSt!'--'}</p>
+												<p>证件号：${caseInfo.cardNO!'--'}</p>
+												<p>当事人：${caseInfo.name!'--'}</p>
+											</div>
+										</div>
+										<br/>
+										<div id="e" class="result result-suc"><i class="fa fa-check-circle" aria-hidden="true"></i> 工商投资信息已排查</div> -->
+									</div>
+									<!--无工商投资 -->
+									<div class="quit-box quit-box-line hidden" data-name="enterpriseN">
+										<a class="quit-line-tit"><img class="hidden-xs" src="img/report-tit.jpg"><img class="hidden visible-xs" src="img/report-tit-xs.jpg"><em>工商投资</em></a>
+										
+										<div id="e" class="result result-suc result-care"><i class="fa fa-check-circle" aria-hidden="true"></i> 暂无工商投资信息！</div>
+									</div>
+									
+									
+									<!--高危历史-->
+									
+									<div class="quit-box quit-box-line">
+										<a class="quit-line-tit"><img class="hidden-xs" src="img/report-tit.jpg"><img class="hidden visible-xs" src="img/report-tit-xs.jpg"><em>高危记录</em></a>
+										<div class="row report-risk">
+											<div class="col-md-12">
+												<a><img class="hidden visible-xs" src="img/brushed-alum.png" width="100%" />
+												<div class="low"><img class="hidden visible-xs" src="img/risk-th.png"></div>
+												<div class="high hidden"><img class="hidden visible-xs" src="img/risk-th.png"></div>
+											</a></div>
+											<div class="col-md-12">
+												<div class="col-md-6 col-xs-6">低风险</div>
+												<div class="col-md-6 col-xs-6 text-right">高风险</div>
+											</div>
+										</div>
+										<div id="e" class="result result-suc" data-name="fxian"></div>
+									</div>
+
+									
+									
+
+									<!--风险六项-->
+									<!--司法案例-->
+									<div class="quit-box quit-box-line hidden" data-name="riskalY">
+										<!-- <a class="quit-line-tit"><img class="hidden-xs" src="img/report-tit.jpg"><img class="hidden visible-xs" src="img/report-tit-xs.jpg"><em>司法案例</em></a>
+										<div class="row">
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>标题：</p>
+												<p>证件号码：</p>
+												<p>性别：</p>
+												<p>案件类型：</p>
+												<p>审结日期：</p>
+												<p>审理程序：</p>
+												<p>判决结果：</p>
+											</div>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>当事人姓名：</p>
+												<p>出生日期：</p>
+												<p>法院名称：</p>
+												<p>案件字号：</p>
+												<p>案由：</p>
+											</div>
+										</div>
+										<div id="f" class="result result-suc result-fail"><i class="fa fa-question-circle" aria-hidden="true"></i> 存在${reportInfo.riskInfo.riskAlsInfos?size}条司法案例记录！</div> -->
+									</div>
+									<!--无司法案例 -->
+									<div class="quit-box quit-box-line hidden" data-name="riskalN">
+										<a class="quit-line-tit"><img class="hidden-xs" src="img/report-tit.jpg"><img class="hidden visible-xs" src="img/report-tit-xs.jpg"><em>司法案例</em></a>
+										<div id="f" class="result result-suc"><i class="fa fa-check-circle" aria-hidden="true"></i> 恭喜，暂无司法案例记录！</div>
+									</div>
+									<!--司法执行 -->
+
+									<div class="quit-box quit-box-line hidden" data-name="riskzxY">
+										<!-- <a class="quit-line-tit"><img class="hidden-xs" src="img/report-tit.jpg"><img class="hidden visible-xs" src="img/report-tit-xs.jpg"><em>司法执行</em></a>
+
+										<div class="row row-report">
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>被执行人：</p>
+												<p>案号：</p>
+												<p>执行标的：</p>
+												<p>执行法院：</p>
+											</div>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>证件号码：</p>
+												<p>案件状态：</p>
+												<p>立案时间：</p>
+											</div>
+										</div>
+										<div id="g" class="result result-suc result-fail"><i class="fa fa-question-circle" aria-hidden="true"></i> 存在${reportInfo.riskInfo.riskZxsInfos?size}条司法执行记录！</div> -->
+									</div>
+									<!--无司法执行 -->
+									<div class="quit-box quit-box-line hidden" data-name="riskzxN">
+										<a class="quit-line-tit"><img class="hidden-xs" src="img/report-tit.jpg"><img class="hidden visible-xs" src="img/report-tit-xs.jpg"><em>司法执行</em></a>
+										
+										<div id="g" class="result result-suc"><i class="fa fa-check-circle" aria-hidden="true"></i> 恭喜，暂无司法执行记录！</div>
+									</div>
+
+									<!--司法失信-->
+									<div class="quit-box quit-box-line hidden" data-name="risksxY">
+										
+										
+										<!-- <a class="quit-line-tit"><img class="hidden-xs" src="img/report-tit.jpg"><img class="hidden visible-xs" src="img/report-tit-xs.jpg"><em>司法失信</em></a>
+										<div class="row">
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>被执行人：</p>
+												<p>证件号码：</p>
+												<p>性别：</p>
+												<p>执行法院：</p>
+												<p>发布时间：</p>
+												<p>执行依据单位：</p>
+												<p>已履行内容：</p>
+												<p>失信被执行人行为具体情形：</p>
+											</div>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>执行依据文号：</p>
+												<p>案号：</p>
+												<p>年龄：</p>
+												<p>省份：</p>
+												<p>立案时间：</p>
+												<p>被执行人履行情况：</p>
+												<p>未履行内容：</p>
+												<p>生效法律文书确定的义务：</p>
+											</div>
+										</div>
+										<div id="h" class="result result-suc result-fail"><i class="fa fa-question-circle" aria-hidden="true"></i> 存在${reportInfo.riskInfo.riskSxsInfos?size}条司法失信记录！</div> -->
+										
+										
+									</div>
+									<!--无司法失信 -->
+									<div class="quit-box quit-box-line hidden" data-name="risksxN">
+										<a class="quit-line-tit"><img class="hidden-xs" src="img/report-tit.jpg"><img class="hidden visible-xs" src="img/report-tit-xs.jpg"><em>司法失信</em></a>
+										
+										<div id="h" class="result result-suc"><i class="fa fa-check-circle" aria-hidden="true"></i> 恭喜，暂无司法失信记录！</div>
+									</div>
+									<!--税务行政 -->
+
+									<div class="quit-box quit-box-line hidden" data-name="riskswxzY">
+										<!-- <a class="quit-line-tit"><img class="hidden-xs" src="img/report-tit.jpg"><img class="hidden visible-xs" src="img/report-tit-xs.jpg"><em>税务行政</em></a>
+
+										<div class="row">
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>标题：</p>
+												<p>证件号码：</p>
+												<p>经营地点：</p>
+											</div>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>公告时间：</p>
+												<p>被执行人：</p>
+												<p>法人姓名：</p>
+											</div>
+										</div>
+
+										<div id="i" class="result result-suc result-fail"><i class="fa fa-question-circle" aria-hidden="true"></i> 存在${reportInfo.riskInfo.riskSwsInfos?size}条税务行政记录！</div> -->
+									</div>
+									<!--无税务行政 -->
+									<div class="quit-box quit-box-line hidden" data-name="riskswxzN">
+										<a class="quit-line-tit"><img class="hidden-xs" src="img/report-tit.jpg"><img class="hidden visible-xs" src="img/report-tit-xs.jpg"><em>税务行政</em></a>
+										
+										<div id="i" class="result result-suc"><i class="fa fa-check-circle" aria-hidden="true"></i> 恭喜，暂无税务行政记录！</div>
+									</div>
+									<!--催欠公告-->
+
+									<div class="quit-box quit-box-line hidden" data-name="riskcqY">
+										<!-- <a class="quit-line-tit"><img class="hidden-xs" src="img/report-tit.jpg"><img class="hidden visible-xs" src="img/report-tit-xs.jpg"><em>催欠公告</em></a>
+
+										<div class="row">
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>标题：</p>
+												<p>被催欠人：</p>
+												<p>状态：</p>
+											</div>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>催欠金额：</p>
+												<p>发布时间：</p>
+											</div>
+										</div>
+										<br/>
+										<div class="row">
+											<p class="quit-txt"><b>负责人</b></p>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>负责人姓名：</p>
+												<p>手机号码：</p>
+												<p>座机：</p>
+												<p>详细地址：</p>
+											</div>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>职务：</p>
+												<p>发布时间：</p>
+												<p>电子邮件：</p>
+												<p>地址：</p>
+											</div>
+										</div>
+										<br/>
+										<div class="row">
+											<p class="quit-txt"><b>担保经办人</b></p>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>担保经办人姓名：</p>
+												<p>性别：</p>
+												<p>座机：</p>
+												<p>详细地址：</p>
+											</div>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>证件号码：</p>
+												<p>手机号码：</p>
+												<p>电子邮件：</p>
+												<p>地址：</p>
+											</div>
+										</div>
+										<br/>
+										<div class="row">
+											<p class="quit-txt"><b>欠款经办人</b></p>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>欠款经办人姓名：</p>
+												<p>性别：</p>
+												<p>座机：</p>
+												<p>详细地址：</p>
+											</div>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>证件号码：</p>
+												<p>手机号码：</p>
+												<p>电子邮件：</p>
+												<p>地址：</p>
+											</div>
+										</div>
+										<br/>
+										<div class="row">
+											<p class="quit-txt"><b>担保股东</b></p>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>担保股东姓名：</p>
+												<p>性别：</p>
+												<p>详细地址：</p>
+											</div>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>证件号码：</p>
+												<p>座机：</p>
+												<p>地址：</p>
+											</div>
+										</div>
+										<br/>
+										<div class="row">
+											<p class="quit-txt"><b>欠款股东</b></p>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>欠款股东姓名：</p>
+												<p>性别：</p>
+												<p>详细地址：</p>
+											</div>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>证件号码：</p>
+												<p>座机：</p>
+												<p>地址：</p>
+											</div>
+										</div>
+
+										<div id="j" class="result result-suc result-fail"><i class="fa fa-question-circle" aria-hidden="true"></i> 存在${reportInfo.riskInfo.riskCqsInfos?size}条催欠公告记录！</div> -->
+									</div>
+									<!--无催欠公告 -->
+									<div class="quit-box quit-box-line hidden" data-name="riskcqN">
+										<a class="quit-line-tit"><img class="hidden-xs" src="img/report-tit.jpg"><img class="hidden visible-xs" src="img/report-tit-xs.jpg"><em>催欠公告</em></a>
+										
+										<div id="j" class="result result-suc"><i class="fa fa-check-circle" aria-hidden="true"></i> 恭喜，暂无催欠公告记录！</div>
+									</div>
+									<!--网贷逾期-->
+
+									<div class="quit-box quit-box-line hidden" data-name="riskyqY">
+										<!-- <a class="quit-line-tit"><img class="hidden-xs" src="img/report-tit.jpg"><img class="hidden visible-xs" src="img/report-tit-xs.jpg"><em>网贷逾期</em></a>
+
+										<div class="row">
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>标题：</p>
+												<p>证件号码：</p>
+												<p>籍贯地址：</p>
+												<p>本金本息：</p>
+												<p>已还金额：</p>
+												<p>还款状态：</p>
+												<p>数据来源：</p>
+											</div>
+											<div class="col-md-6 col-xs-6 quit-txt">
+												<p>姓名：</p>
+												<p>居住电话：</p>
+												<p>贷款时间：</p>
+												<p>未还罚息：</p>
+												<p>更新时间：</p>
+											</div>
+										</div>
+
+										<div class="result result-suc result-fail"><i class="fa fa-question-circle" aria-hidden="true"></i> 存在${reportInfo.riskInfo.riskWdyqsInfos?size}条网贷逾期记录！</div> -->
+									</div>
+									<!--无网贷逾期-->
+									<div class="quit-box quit-box-line hidden" data-name="riskyqN">
+										<a class="quit-line-tit"><img class="hidden-xs" src="img/report-tit.jpg"><img class="hidden visible-xs" src="img/report-tit-xs.jpg"><em>网贷逾期</em></a>
+										
+										<div class="result result-suc"><i class="fa fa-check-circle" aria-hidden="true"></i> 恭喜，暂无网贷逾期记录！</div>
+									</div>
+									
+									<h3 class="hidden"><em class="reportId"></em><em id="scdate"></em></h3>
+									<p class="text-center relief hidden-xs">免责声明：本报告数据来源有效、合法，仅供参考，不做法律依据，不承担法律责任。</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					
+					
+					<div class="col-md-1">
+						<div class="panel panel-default panel-report">
+
+							<div class="panel-heading text-center">操作</div>
+							<div class="row panel-body text-center report-do">
+
+								<a class="text-green" onclick="print()" href="javascript:;">打印<br />报告</a>
+								
+								<a href="javascript:;" id="headImage">职员<br />头像</a>
+								
+								<a href="javascript:;" id="zjzp">证件<br />照片</a>
+								
+								<a href="javascript:;" id="lzzm">离职<br />证明</a>
+								
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="foot-nav ">
+					<footer>
+					<div class="container"><em class="pull-left">注册单位统计：1022</em><em class="pull-right ">忠信信息技术有限公司© <a target="_blank" href="http://icp.chinaz.com/info?q=zxcioc.com">粤ICP备16003933号-2</a></em></div>
+				</footer>
+				</div>
+			</div>
+			<script>function print() {$("#div-print").jqprint();}</script>
+	</body>
+
+</html>

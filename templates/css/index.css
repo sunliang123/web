@@ -1,0 +1,211 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0} 
+body{font:14px;font-family: Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif; background:#fff;-webkit-text-size-adjust:100%;} 
+a{color:#2d374b;text-decoration:none} 
+a:hover{color:#cd0200;text-decoration:underline} 
+em{font-style:normal} 
+li{list-style:none} 
+img{border:0;vertical-align:middle} 
+table{border-collapse:collapse;border-spacing:0} 
+p{word-wrap:break-word}
+.clear{clear: both;}
+
+
+
+/*======================头尾=======================*/
+
+/*黑色导航*/
+.nav{width: 100%;height: auto;position: fixed;top: 0;z-index: 999;padding: 25px 0;transition: 1s;}
+.nav-select{background:rgba(0,0,0,0.5); transition: 0s;}
+.nav a{float: left;margin-left: 5%;}
+.nav ul{float: right;margin-right: 5%;margin-top: 10px;}
+.nav ul li{float: left;width: 90px; text-align: right;}
+.nav ul li a{color: #fff;transition: .3s;}
+.nav ul li a:hover{text-decoration: initial;color: #ff5515;transition: .3s;}
+
+/*白色导航*/
+.nav-login{background: #fff; box-shadow: 0 0 3px #666;}
+.nav-login em{font-size: 16px;color: #c4c4c4;float: left;margin-top: 20px;margin-left: 10px;}
+
+/*首页底部*/
+.footter{min-height: 240px; background: #222; padding: 0 5%; text-align: center;padding-top: 65px;}
+.foot-nav-last{text-align: left;}
+.foot-navs li.tit{ color: #fff; font-size: 14px; line-height: 40px;}
+.foot-navs li{color: #9c9c9c;line-height: 30px;}
+.foot-navs li a{color: #555;}
+.code{width: 112px; height: 145px; background: url(../img/ewm.png) no-repeat;}
+.copyright{line-height: 55px; color: #666666; text-align: center; background: #222;border-top: 1px solid #333;font-size:12px;}
+.copyright a{color: #666666;}
+
+
+
+
+/*======================通用=======================*/
+
+/*按钮*/
+.btn{border-radius: 0;height: 40px;}
+.btn-orange{color:#fff;background-color:#ff5105;border-color:#ff5105;}
+.btn-orange:focus,.btn-orange.focus{color:#fff;background-color:#ff5105; border: 1px solid #ff5105;}
+.btn-orange:hover{color:#fff;background-color:#eb4d07;border-color:#eb4d07;}
+.btn-orange:active,.btn-orange.active,.open > .dropdown-toggle.btn-orange{color:#fff;background-color:#ff5105;border-color:#ff5105}
+.btn-orange:active:hover,.btn-orange.active:hover,.open > .dropdown-toggle.btn-orange:hover,.btn-orange:active:focus,.btn-orange.active:focus,.open > .dropdown-toggle.btn-orange:focus,.btn-orange:active.focus,.btn-orange.active.focus,.open > .dropdown-toggle.btn-orange.focus{color:#fff;background-color:#ff5105;border-color:#ff5105}
+.btn-orange:active,.btn-orange.active,.open > .dropdown-toggle.btn-orange{background-image:none}
+.btn-orange.disabled,.btn-orange[disabled],fieldset[disabled] .btn-orange,.btn-orange.disabled:hover,.btn-orange[disabled]:hover,fieldset[disabled] .btn-orange:hover,.btn-orange.disabled:focus,.btn-orange[disabled]:focus,fieldset[disabled] .btn-orange:focus,.btn-orange.disabled.focus,.btn-orange[disabled].focus,fieldset[disabled] .btn-orange.focus,.btn-orange.disabled:active,.btn-orange[disabled]:active,fieldset[disabled] .btn-orange:active,.btn-orange.disabled.active,.btn-orange[disabled].active,fieldset[disabled] .btn-orange.active{background-color:#f77b45;border-color:#fff}
+.btn-orange .badge{color:#fff;background-color:#333；}
+
+
+.nav ul li a.btn-login{border: 1px solid #ff6930;padding: 2px 20px;color: #ff6930;margin-top: -3px;}
+.nav ul li a.btn-zhuce{background:#ff6930;color:#fff;border: 1px solid #ff6930; padding: 2px 20px;margin-top: -3px;}
+.nav ul li a.btn-login:hover{border: 1px solid #e94406;color: #e94406;}
+.nav ul li a.btn-zhuce:hover{background:#e94406;border: 1px solid #e94406;}
+
+/*提示*/
+.help-block {font-size: 12px;color: red;}
+
+/*五列*/
+.col-xs-5ths, .col-sm-5ths, .col-md-5ths, .col-lg-5ths {position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+@media ( min-width : 768px) {.col-sm-5ths {width: 20%; float: left;}}
+@media ( min-width : 992px) {.col-md-5ths {width: 20%;float: left;}}
+@media ( min-width : 1200px) {.col-lg-5ths {width: 20%;float: left;}}
+
+
+
+
+
+/*======================首页=======================*/
+
+/*视频*/
+.head{width: 100%;height: 100%;overflow: hidden;position: relative;background:#000; background-size: 100%;}
+.head-bg{position: absolute;width: 100%;height: 100%;top: 0;left: 0;background:url(../img/head-bg.png) rgba(0,0,0,0.5);z-index: 999;}
+.head-bg img{position: absolute;top: 245px;left: 50%;margin-left: -320px;z-index: 99;}
+
+
+/*优势*/
+.about{margin: 150px auto;margin-bottom: 160px; display: flex;justify-content:space-between;}
+.about-box{width: 360px; height:auto;background: rgba(0,0,0,0.1);text-align: center;}
+.about div:nth-child(1){background:url(../img/1.jpg) no-repeat; background-size: 100%;}
+.about div:nth-child(2){background:url(../img/2.png) no-repeat; background-size: 100%;}
+.about div:nth-child(3){background:url(../img/3.png) no-repeat; background-size: 100%;}
+.about-box a{margin-top: 80%;display: block;color: #ff5515;font-weight: 700;}
+.about-box p{padding-top: 10px;color: #999;font-size: 14px;}
+
+
+
+
+
+/*======================关于我们=======================*/
+
+.bor-title{border-bottom: 1px solid #ff5105; color: #ff5105; line-height: 50px; line-height: 50px; margin-top:5%; margin-bottom: 4%; font-size: 16px;}
+.bor-title em{font-size: 12px; color: #999;}
+.about-banner{height: 343px; width: 100%; background: url(../img/about-banner.jpg) no-repeat;background-position: center;}
+.about-com{text-align: left; margin-bottom: 10%;overflow-x: hidden;}
+.about-com img{max-width: 501px; max-height: 279px;}
+.about-com p{padding-top: 10px; line-height: 29px;}
+
+
+
+
+/*======================产品服务=======================*/
+.center-title h2{width: 100%; text-align: center;font-size:2.4rem;letter-spacing: 2px; color: #666;margin-bottom: 1%;}
+.center-title h2 span{color: #ff5105;font-size:2.4rem;}
+.center-title p{text-align: center;color: #666666; line-height: 22px; margin-top: 10px;padding:0 2%; max-width:1200px;margin: 0 auto;margin-bottom: 3%;}
+.center-title .bor{width: 100%; height: 1px; background: url(../img/about-bor.png) center center no-repeat;background-size:100% 100%;margin-top: 1.5%;}
+.pro-banner{background:url(../img/pro-banner.jpg) no-repeat; background-position: center; width: 100%; height:436px;}
+.pro-present{padding: 5% 0 5% 0;}
+.pro-div{background: #eeeeee; width: 100%; overflow-x: hidden;}
+.pro-div-odd{background: #fff;}
+.pro-img{text-align: center; width: 100%; height: 100%; margin: 15% 0 15% 0;}
+.pro-img img{width: 200px; height: 218px;}
+.pro-txt-a h3{font-size:20px;margin-bottom: 3%; color: #666; margin-top: 20%;}
+.pro-txt-a p{font-size: 16px; color: #666; margin-bottom: 10%;}
+.pro-txt-odd,.pro-txt-odd h3,.pro-txt-odd p{text-align: right;}
+.pro-super{ background: url(../img/pro-super.jpg); padding:3% 0; overflow-x: hidden;}
+.pro-cont{margin-top: 5%; margin-bottom: 2%;}
+.pro-supbox{width: 195px; height: 213px; background: url(../img/pro-super-bg.png) no-repeat;margin: 0 auto; text-align: center;}
+.pro-choice{padding: 5% 0;}
+.pro-supbox span{width: 65px; height: 65px; display: inline-block; margin-top: 25%;}
+.pro-supbox p{text-align: center;}
+.pro-supbox-1 span{background: url(../img/pro-1.png) no-repeat;}
+.pro-supbox-2 span{background: url(../img/pro-2.png) no-repeat;}
+.pro-supbox-3 span{background: url(../img/pro-3.png) no-repeat;}
+.pro-supbox-4 span{background: url(../img/pro-4.png) no-repeat;}
+.pro-supbox-5 span{background: url(../img/pro-5.png) no-repeat;}
+.pro-supbox-6 span{background: url(../img/pro-6.png) no-repeat;}
+.pro-supbox-7 span{background: url(../img/pro-7.png) no-repeat;}
+.pro-supbox-8 span{background: url(../img/pro-8.png) no-repeat;}
+.pro-supbox-9 span{background: url(../img/pro-9.png) no-repeat;}
+.pro-supbox-10 span{background: url(../img/pro-10.png) no-repeat;}
+
+
+
+
+
+/*======================登录注册=======================*/
+
+/*协议*/
+.agre-div{height:120px;}
+.agree{ border:1px solid #dedede;padding: 60px 5%;line-height: 30px;  box-shadow: 10px 10px 0px rgba(0,0,0,0.1);background:#f9f9fb;}
+.agree h1{font-size: 22px; text-align: center;}
+
+
+/*登录*/
+.head-logo{height: 700px; background:url(../img/login-bg.jpg) no-repeat;background-position:center;background-clip: content-box; position: relative;}
+.login-form .form-group-btn{margin-bottom:0px}
+.login-form span{line-height:50px;display:block;text-align:center}
+.login-form span a.forget{float:left}
+.login-form span p{float:right}
+.login-form .captcha img{position:absolute;top:50%;right:18px;margin-top:-20px;width:100px}
+.login-form .form-group.form-group-code small{right:40%}
+.login-form .form-group.captcha small{right:110px}
+.form-group{height:45px;margin-bottom:15px}
+.form-group input{margin-bottom:0;height:45px;background:none;border-radius: 0;}
+.form-group input:focus{box-shadow:none;border:1px solid #b9b9b9}
+.btn-code{height:45px;border:none;background: none;border: 1px solid #999;}
+.form-group-code{height:auto;}
+.copup-rig{float:right}
+.copup-rig li{text-align:center}
+.copup-logo{width:138px;height:45px;background:url(../images/index/logo.png) no-repeat;background-size: 100%;margin:20px auto;margin-top:35px;}
+.usme-but:hover {color: #fff;}
+.join{color:#fff;}
+.usme-but{color:#fff;}
+.register{color: #333;margin-top: 35px;margin-bottom: 0;height: 40px;}
+.register a{color: #ff5515;}
+.login-title{ height:25px;margin: 30px 15px 30px 15px;font-size: 16px;}
+.login-title h1{font-size:18px;color:#ff5515;font-weight:700;}
+.from-control-login{border: 1px solid #999;}
+.modal-content-login{padding:0 15px; background:rgba(255,255,255,0.8); border: 0;border-radius: 0;}
+.modal-dialog-login{position: absolute; top: 17%;right: 15%;max-width: 360px;}
+.modal-dialog-zhuce{position: absolute; top: 14%;right: 15%;max-width: 360px;}
+.modal-dialog-forget{position: absolute; top: 11%;right: 15%;max-width: 360px;}
+.modal-content-login input{border:1px solid #999;}
+.modal-content-login input:focus{border:1px solid #666;}
+.login-bg{height:310px;background: #fff url(../images/index/user_bg.jpg) 0 no-repeat; background-size:100%;}
+.agreement{padding: 0 17px 10px 17px;font-size: 12px;}
+.agreement input{margin-top:5px;}
+.agreement label em{vertical-align:top;font-size:12px;font-weight:100;cursor: pointer;}
+.agreement a{color:#2e82ff;vertical-align: top;}
+.hx-k3{transform:rotateX(-60deg) rotateZ(-60deg); }
+.remenbme{height: 35px;font-size: 12px;}
+.remenbme a{color: #2e82ff;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

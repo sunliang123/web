@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="shortcut icon" href="http://avatar.zxcioc.com/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/toastr.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="css/bootstrap-datepicker3.min.css" />
+		<script type="text/javascript" src="js/lib/jquery.min.js" /></script>
+		<script type="text/javascript" src="js/lib/bootstrap.min.js" /></script>
+		<script type="text/javascript" src="js/lib/bootstrap-datepicker.min.js" /></script>
+		<script type="text/javascript" src="js/lib/formValidation.popular.js"></script>
+		<script type="text/javascript" src="js/lib/formValidation.bootstrap.js" /></script>
+		<script type="text/javascript" src="js/lib/formValidator.js"></script>
+		<script type="text/javascript" src="js/lib/toastr.js"></script>
+		<script type="text/javascript" src="js/lib/underscore.min.js"></script>
+		<script type="text/javascript" src="js/lib/bootstrap-dialog.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/write/head.js"></script>
+		<script type="text/javascript" src="js/write/personal.edit.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="cont">
+			<div class="main-body">
+				<header>
+					<nav class="navbar navbar-inverse noradius nav-index">
+						<div class="container">
+							<div>
+								<em class="navbar-brand-index welcome hidden-xs">
+					<span id="name"></span>
+					<span class="hidden" id=crtified></span>
+					<span class="hidden" id=bjname></span>
+					<a href="/personal.html"><span class="companyName"></span></a> 
+				</em>
+								<em class="navbar-brand-index welcome hidden-md hidden-sm hidden-lg">您好，尹岳峰</em>
+								<ul class="nav navbar-nav menu-function">
+									<li class="dropdown-nav">
+										<a class="logout">安全退出</a>
+									</li>
+
+								</ul>
+							</div>
+
+						</div>
+					</nav>
+				</header>
+				<div class="header">
+					<div class="container container-nopd">
+						<a href="/home.html" class="system-logo"><img src="img/logo-home.jpg" width="116px"></a>
+						<ul class="sys-nav">
+							<li>
+								<a href="/home.html">入职筛查</a><em class="hidden-xs"></em></li>
+							<li>
+								<a href="/report.html">筛查报告</a>
+							</li>
+							<li>
+								<a href="/team.html">职员管理</a>
+							</li>
+						</ul>
+						<ul class="sys-nav sys-nav-mg pull-right">
+							<li class="pull-right hidden">
+								<a href="/work" class="btn btn-style btn-default btn-xs hidden-xs pull-left btn-orange">　快入职　</a>
+							</li>
+							<li class="pull-right hidden">
+								<a href="/work" class="btn btn-style btn-xs hidden-xs pull-left btn-orange">快入职</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="container box">
+
+					<div class="display-table">
+						<div class="display-table-row">
+
+							<div class="col-md-10 col-md-offset-1 col-xs-12" id="pjax_content">
+								<div class="row panel panel-default">
+									<div class="panel-heading">
+										个人信息
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-12">
+
+												<form class="form-horizontal form-validation information fv-form fv-form-bootstrap" novalidate="novalidate">
+
+													<div class="panel-heading-tab">
+														<ul class="nav nav-tabs" role="tablist">
+															<li role="presentation" class="active">
+																<a href="#" role="tab">修改个人信息</a>
+															</li>
+														</ul>
+													</div>
+													<br />
+													<div class="row">
+														<div class="col-md-12">
+															<div class="login-error text-center help-block error">
+															</div>
+														</div>
+													</div>
+													<br />
+													<div class="form-group">
+														<label for="name" class="col-sm-4 col-xs-12 control-label "><span class="text-danger">*</span> 姓名:</label>
+														<div class="col-sm-5 col-xs-12">
+															<input type="text" class="form-control" id="rname" name="name" value="" placeholder="请输入您的真实姓名" data-fv-notempty='true' data-fv-notempty-message='请输入您的真实姓名' data-fv-blank="true" required>
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="idCard" class="col-sm-4 col-xs-12 control-label "><span class="text-danger">*</span> 身份证号:</label>
+														<div class="col-sm-5 col-xs-12">
+															<input type="text" class="form-control" id="idCard" name="idCard" value="" placeholder="请输入您的身份证号" pattern="^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$|^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$" data-fv-regexp-message="身份证格式不正确" data-fv-notempty="true" data-fv-blank="true" required />
+
+														</div>
+
+													</div>
+													
+													<div class="form-group">
+														<label for="position" class="col-sm-4 col-xs-12 control-label "><span class="text-danger">*</span> 手机号:</label>
+														<div class="col-sm-5 col-xs-12">
+															<input type="text" class="form-control" id="mobile" name="mobile" value="" placeholder="请输入您的手机号" disabled>
+
+														</div>
+
+													</div>
+													
+													<div class="form-group">
+														<label for="dept" class="col-sm-4 col-xs-12 control-label "><span class="text-danger">*</span> 部门:</label>
+														<div class="col-sm-5 col-xs-12">
+															<select class="form-control" name="dept" required>
+																
+															</select>
+
+														</div>
+
+													</div>
+													<div class="form-group">
+														<label for="position" class="col-sm-4 col-xs-12 control-label "><span class="text-danger">*</span> 职位:</label>
+														<div class="col-sm-5 col-xs-12">
+															<input type="text" class="form-control" id="position" name="position" value="" placeholder="请输入您担任的职位" required>
+
+														</div>
+
+													</div>
+													
+													<div class="form-group">
+														<label for="idCard" class="col-sm-4 col-xs-12 control-label "><span class="text-danger">*</span> 入职日期:</label>
+														<div class="col-sm-5 col-xs-12">
+															<div class="input-append date form_datetime">
+																<input class="form-control" size="16" placeholder="请选择选择时间" type="text" name="entryDate" required>
+																<span class="add-on"><i class="icon-th"></i></span>
+															</div>
+
+														</div>
+
+													</div>
+
+													<div class="row">
+														<div class="col-md-12">
+															<div class="form-group text-center">
+																<button type="submit" id="submit" class="btn btn-primary btn-orange">确认修改</button>
+															</div>
+														</div>
+													</div>
+
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			<div class="foot-nav">
+				<footer>
+					<div class="container "><em class="pull-left">注册单位统计：1022</em><em class="pull-right ">忠信信息技术有限公司© <a target="_blank" href="http://icp.chinaz.com/info?q=zxcioc.com">粤ICP备16003933号-2</a></em></div>
+				</footer>
+			</div>
+		</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>找回密码  - 职路 job road</title>
+		<link rel="shortcut icon" href="http://avatar.zxcioc.com/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/toastr.min.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+		<script type="text/javascript" src="js/lib/jquery.min.js"/></script>
+		<script type="text/javascript" src="js/lib/bootstrap.min.js"/></script>
+		<script type="text/javascript" src="js/lib/formValidation.popular.js"></script>
+		<script type="text/javascript" src="js/lib/formValidation.bootstrap.js"/></script>
+		<script type="text/javascript" src="js/lib/formValidator.js"></script>
+		<script type="text/javascript" src="js/lib/jquery.form.js"></script>
+		<script type="text/javascript" src="js/lib/toastr.js"></script>
+		<script type="text/javascript" src="js/write/forget.js"></script>
+	</head>
+
+	<body>
+
+		<div class="head head-logo">
+
+			<div class="modal-dialog modal-dialog-forget">
+				<div class="modal-content modal-content-login modal-content-nolog row">
+					<div class="modal-body">
+						<div class="bootstrap-dialog-body">
+							<div class="bootstrap-dialog-message">
+								<form role="form" novalidate="novalidate" class="fv-form fv-form-bootstrap"><button type="submit" class="fv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+									<div class="login-title text-center">
+										<img src="img/login-logo.png" width="30px" />　· 找回密码
+
+									</div>
+									<div class="login-form">
+										<!--错误提示-->
+										<div class="row">
+											<div class="col-md-12">
+												<div class="login-error text-center help-block">
+													<small class="text-primary help-block"></small>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-xs-12">
+												<input class="form-control" type="text" name="mobile" id="mobile" placeholder="手机号" data-fv-mobile='true' data-fv-notempty='true' data-fv-notempty-message='请输入手机号' data-fv-blank="true" required autofocus />
+											</div>
+										</div>
+										<div class="form-group captcha hidden">
+											<div class="col-xs-12">
+												<input class="form-control" type="text" name="captcha" id="captcha" placeholder="图片验证码" />
+												<img src="">
+											</div>
+										</div>
+										<div class="form-group form-group-code">
+											<div class="row">
+												<div class="col-md-12">
+													<div class="col-md-7">
+														<input class="form-control" type="text" name="code" id="code" placeholder="短信验证码" data-fv-notempty='true' data-fv-notempty-message='请输入短信验证码' data-fv-blank="true" />
+													</div>
+													<div class="col-md-5">
+														<button type="button" class="btn btn-code btn-block">获取验证码</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-xs-12">
+												<input class="form-control" type="password" name="password" id="password" placeholder="设置新密码" data-fv-notempty='true' data-fv-notempty-message='请输入新密码' data-fv-blank="true" data-fv-regexp="true" data-fv-regexp-regexp="^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$" data-fv-regexp-message="请输入6至16位包含字母数字" />
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-xs-12">
+												<input class="form-control" type="password" name="newpassword" id="newpassword" placeholder="确认新密码" data-fv-notempty='true' data-fv-notempty-message='请输入确认密码' data-fv-identical="true" data-fv-identical-field="password" data-fv-identical-message="2次输入的密码不一致" />
+											</div>
+										</div>
+										<div class="form-group form-group-btn">
+											<div class="col-xs-12">
+												<button class="btn btn-orange btn-block" type="submit">确认修改</button>
+											</div>
+										</div>
+										<div class="form-group register">
+											<div class="col-xs-12 text-center">又想起来了？去
+												<a href="login.html">登录</a>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="nav nav-login">
+			<a href="index.html"><img src="img/logo-f.jpg" width="120px"></a><em>| 找回密码</em>
+			<div class="clear"></div>
+		</div>
+		<div class="text-center">忠信信息技术有限公司© <a target="_blank" href="http://icp.chinaz.com/info?q=zxcioc.com">粤ICP备16003933号-2</a></div>
+	</body>
+
+</html>

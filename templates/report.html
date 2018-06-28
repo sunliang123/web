@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>筛查报告 - 职路 job road</title>
+		<link rel="shortcut icon" href="http://avatar.zxcioc.com/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="css/bootstrap-dialog.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-datepicker3.min.css" />
+		<link rel="stylesheet" href="css/select2.min.css" />
+		<link rel="stylesheet" href="css/select2-bootstrap.min.css" />
+		<link rel="stylesheet" href="css/toastr.min.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/lib/jquery.min.js" /></script>
+		<script type="text/javascript" src="js/lib/bootstrap.min.js" /></script>
+		<script type="text/javascript" src="js/lib/bootstrap-datepicker.min.js" /></script>
+		<script type="text/javascript" src="js/lib/formValidation.popular.js"></script>
+		<script type="text/javascript" src="js/lib/formValidation.bootstrap.js" /></script>
+		<script type="text/javascript" src="js/lib/formValidator.js"></script>
+		<script type="text/javascript" src="js/lib/jquery.form.js"></script>
+		<script type="text/javascript" src="js/lib/toastr.js"></script>
+		<script type="text/javascript" src="js/lib/underscore.min.js"></script>
+		<script type="text/javascript" src="js/lib/bootstrap-dialog.js"></script>
+
+		<script type="text/javascript" src="js/lib/jquery.spring-friendly.js"></script>
+		<script type="text/javascript" src="js/lib/jquery.dataTables.js"></script>
+		<script type="text/javascript" src="js/lib/dataTables.bootstrap.js"></script>
+
+		<script type="text/javascript" src="js/lib/select2.full.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/write/head.js"></script>
+		<script type="text/javascript" src="js/write/date.js"></script>
+		<script type="text/javascript" src="js/write/report.js"></script>
+	</head>
+
+	<body>
+
+		<div class="cont">
+			<div class="main-body">
+				<header>
+					<nav class="navbar navbar-inverse noradius nav-index">
+						<div class="container">
+							<div>
+								<em class="navbar-brand-index welcome hidden-xs">
+					<span id="name"></span>
+					<a href="/personal.html"><span class="companyName">欢迎使用职路 - 轻松入职，助力成长！</span></a>
+				</em>
+								<em class="navbar-brand-index welcome hidden-md hidden-sm hidden-lg">您好，尹岳峰</em>
+								<ul class="nav navbar-nav menu-function">
+									<li class="dropdown-nav">
+										<a class="logout">安全退出</a>
+									</li>
+
+								</ul>
+							</div>
+
+						</div>
+					</nav>
+				</header>
+				<div class="header">
+					<div class="container container-nopd">
+						<a href="/home.html" class="system-logo"><img src="img/logo-home.jpg" width="116px"></a>
+						<ul class="sys-nav">
+							<li>
+								<a href="/home.html">扫码入职</a><em class="hidden-xs"></em></li>
+							<li class="active">
+								<a href="/report.html">筛查报告</a>
+							</li>
+							<li>
+								<a href="/team.html">职员管理</a>
+							</li>
+						</ul>
+						<ul class="sys-nav sys-nav-mg pull-right">
+							<li class="pull-right hidden">
+								<a href="/work" class="btn btn-style btn-default btn-xs hidden-xs pull-left btn-orange">　快入职　</a>
+							</li>
+							<li class="pull-right hidden">
+								<a href="/work" class="btn btn-style btn-xs hidden-xs pull-left btn-orange">快入职</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="container box">
+
+					<div class="col-md-12">
+						<div class="panel panel-default ">
+
+							<div class="panel-body ">
+
+								<div class="panel-heading-tab ">
+									<ul class="nav nav-tabs " role="tablist ">
+										<li role="presentation " class="active ">
+											<a href="#" role="tab ">筛查报告</a>
+										</li>
+										<div class="pull-right recordsTotal "></div>
+									</ul>
+								</div>
+								<div class="panel-body panel-body-table ">
+									<div class="tab-content ">
+										<div role="tabpanel " class="tab-pane active ">
+											<div id="DataTables_Table_0_wrapper " class="dataTables_wrapper form-inline dt-bootstrap no-footer ">
+												<div class="row ">
+													<div class="col-sm-6 "></div>
+													<div class="col-sm-6 toolbar "></div>
+												</div>
+												<div class="row ">
+													<div class="col-sm-12 ">
+														<div class="table-responsive ">
+															<table id="reportTable" class="table table-striped table-bordered" cellspacing="0 " width="100% ">
+																<thead>
+																	<tr role="row ">
+																		<th>姓名</th>
+																		<th>部门</th>
+																		<th>职位</th>
+																		<th>报告类型</th>
+																		<th>录入日期</th>
+																		<th>附件资料</th>
+																		<th>操作</th>
+																	</tr>
+																</thead>
+															</table>
+														</div>
+													</div>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="foot-nav ">
+				<footer>
+					<div class="container "><em class="pull-left">注册单位统计：1022</em><em class="pull-right ">忠信信息技术有限公司© <a target="_blank" href="http://icp.chinaz.com/info?q=zxcioc.com">粤ICP备16003933号-2</a></em></div>
+				</footer>
+			</div>
+		</div>
+
+	</body>
+
+</html>

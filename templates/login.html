@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="shortcut icon" href="http://avatar.zxcioc.com/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="js/lib/jquery.min.js"/></script>
+		<script type="text/javascript" src="js/lib/bootstrap.min.js"/></script>
+		<script type="text/javascript" src="js/lib/formValidation.popular.js"></script>
+		<script type="text/javascript" src="js/lib/formValidation.bootstrap.js"/></script>
+		<script type="text/javascript" src="js/lib/formValidator.js"></script>
+		<script type="text/javascript" src="js/write/login.js"></script>
+		
+	</head>
+
+	<body>
+
+		<div class="head head-logo">
+
+			<div class="modal-dialog modal-dialog-login">
+				<div class="modal-content modal-content-login modal-content-nolog row">
+					<div class="modal-body">
+						<div class="bootstrap-dialog-body">
+							<form role="form" novalidate="novalidate" class="fv-form fv-form-bootstrap">
+								<div class="bootstrap-dialog-message">
+									<button type="submit" class="fv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+										<div class="login-title text-center">
+										<img src="img/login-logo.png" width="30px" />　· 手机号登录</span>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<div class="login-error text-center help-block error">
+													<small class="help-block text-danger"></small>
+												</div>
+											</div>
+										</div>
+										<div class="login-form">
+											<div class="form-group">
+												<div class="col-xs-12">
+													<input class="form-control" type="text" name="username" placeholder="手机号" data-fv-mobile='true' data-fv-blank="true" required autofocus />
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="col-xs-12">
+													<input class="form-control" type="password" name="password" placeholder="密码"  name="password" required data-fv-blank='true' data-fv-regexp="true" data-fv-regexp-regexp="^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$" data-fv-regexp-message="请输入6至16位包含字母数字" />
+												</div>
+											</div>
+											<div class="remenbme">
+												<div class="col-md-12 text-right">
+													<a href="forget.html">忘记密码？</a>
+												</div>
+											</div>
+											<div class="form-group form-group-btn">
+												<div class="col-xs-12">
+													<button class="btn btn-orange btn-block" type="submit">立即登录</button>
+												</div>
+											</div>
+											<div class="form-group register">
+												<div class="col-xs-12 text-center">还没有账号？去
+													<a href="zhuce.html">注册</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		<div class="nav nav-login">
+
+			<a href="index.html"><img src="img/logo-f.jpg" width="120px"></a><em>| 欢迎登录</em>
+
+			<div class="clear"></div>
+
+		</div>
+
+		<div class="text-center">忠信信息技术有限公司© <a target="_blank" href="http://icp.chinaz.com/info?q=zxcioc.com">粤ICP备16003933号-2</a></div>
+
+	</body>
+
+</html>

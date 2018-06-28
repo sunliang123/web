@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>扫码入职  - 职路 job road</title>
+		<link rel="shortcut icon" href="http://avatar.zxcioc.com/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/lib/jquery.min.js" /></script>
+		<script type="text/javascript" src="js/lib/bootstrap.min.js" /></script>
+		<script type="text/javascript" src="js/lib/formValidation.popular.js"></script>
+		<script type="text/javascript" src="js/lib/formValidation.bootstrap.js" /></script>
+		<script type="text/javascript" src="js/lib/formValidator.js"></script>
+		<script type="text/javascript" src="js/lib/underscore.min.js"></script>
+		<script type="text/javascript" src="js/lib/bootstrap-dialog.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/write/home.js"></script>
+	</head>
+
+	<body>
+
+		<div class="cont">
+			<div class="main-body">
+
+				<header>
+					<nav class="navbar navbar-inverse noradius nav-index">
+						<div class="container">
+							<div>
+								<em class="navbar-brand-index welcome">
+					<span id="name"></span>
+					<a href="/personal.html"><span class="companyName"></span></a>
+				</em>
+								<em class="navbar-brand-index welcome hidden-md hidden-sm hidden-lg"></em>
+								<ul class="nav navbar-nav menu-function">
+									<li class="dropdown-nav">
+										<a href="#" class="logout">安全退出</a>
+									</li>
+
+								</ul>
+							</div>
+
+						</div>
+					</nav>
+				</header>
+				<div class="header">
+					<div class="container container-nopd">
+						<a href="/home.html" class="system-logo"><img src="img/logo-home.jpg" width="116px"></a>
+						<ul class="sys-nav">
+							<li class="active">
+								<a href="/home.html">扫码入职</a><em class="hidden-xs"></em></li>
+							<li>
+								<a href="/report.html">筛查报告</a>
+							</li>
+							<li>
+								<a href="/team.html">职员管理</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="container box">
+					<div class="">
+						<div class="row hidden">
+							<div class="col-md-12">
+								<div class="usname-banner-b hidden-xs">
+									<div><i class="fa fa-exclamation-circle" aria-hidden="true"></i> 完善企业信息，感受优质服务
+										<a href="/company">立即完善企业信息</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-3">
+								<div class="home-side">
+									<div class="usname-head">
+										<a href="/personal.html" class="user-img">
+											<img id="avatar" src="img/userimg.jpg" width="69" height="69"></a>
+										<p>
+											<a href="#" class="authenticate"></a>
+										</p>
+										<p class="companyname"></p>
+									</div>
+								</div>
+								<div class="home-side home-work hidden-xs">
+									<div class="col-md-12 panel-heading-tab but-work">
+										<ul class="nav nav-tabs" role="tablist">
+											<li role="presentation" class="active">
+												<a href="#home" aria-controls="home" role="tab" data-toggle="tab">常见问题</a>
+											</li>
+										</ul>
+										<div class="tab-content home-work-box">
+											<div class="tab-pane active" id="home">
+												<ul class="questions">
+													<div class="row">
+														<div class="panel-group">
+															<div class="panel panel-default">
+																<div class="panel-heading text-left" role="tab" id="heading5">
+																	<a class="collapsed" href="#collapse5">报告合法吗？</a>
+																</div>
+																<div id="collapse5" class="panel-collapse">
+																	<div class="panel-body" style="border: none;padding-top: 0;">
+																		<div class="text-left text-info">报告模式为自查，经本人授权推送，且报告数据经脱敏处理，仅适用于职场环境。</div>
+																	</div>
+																</div>
+															</div>
+															<div class="panel panel-default">
+																<div class="panel-heading text-left" role="tab" id="heading4">
+																	<a class="collapsed" href="#collapse4">报告数据来源可靠吗？</a>
+																</div>
+																<div id="collapse4" class="panel-collapse ">
+																	<div class="panel-body" style="border: none;padding-top: 0;">
+																		<div class="text-left text-info">报告数据主要来源于国家司法部、教育部、公安部、人社部、交通运输部等相关部门。数据真实可靠。</div>
+																	</div>
+																</div>
+															</div>
+															<div class="panel panel-default">
+																<div class="panel-heading text-left" role="tab" id="heading3">
+																	<a class="collapsed" href="#collapse3">为什么有些证书查不出来？</a>
+																</div>
+																<div id="collapse3" class="panel-collapse ">
+																	<div class="panel-body" style="border: none;padding-top: 0;">
+																		<div class="text-left text-info">数据来源于中华人民共和国人力资源和社会保障部，存在少量证书未被录到网上的可能。</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div class="panel panel-default" style="padding: 40px 30px;">
+									<div class="panel-heading hidden">扫码入职<em> - 请选择一个版本下一步</em>
+										<a style="color:#999;" href="/more" class="pull-right hidden">其他筛查方式&gt;&gt;</a>
+									</div>
+									<div class="col-md-4">
+										<div class="tcbox">
+											<div class="tcbox-tit">基础版</div>
+											<div class="tcbox-box col-md-12">
+												<div class="tcbox-free hidden">奖励
+													<br>100分</div>
+												<ul>
+													<li>
+														<em>身份证号比对</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="通过公安部公民身份信息系统查询，验证身份证信息合法性" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>手机实名比对</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="通过通信运营商数据核实手机号实名情况" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>风险等级评估</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="通过中国大陆公安系统查询犯罪、药物滥用记录时间、内容、宣判单位及刑期" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>司法案例查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="查询当事人是否存在司法案例记录，以及案例详情" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>司法执行查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="通过法院公开诉讼记录数据库查询立案日期、案号、执行法院、执行金额及案件状态" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>司法失信查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="通过法院公开诉讼记录数据库查询立案日期、案号、执行法院、执行情况及文书确定义务" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+
+													<li>
+														<em>税务行政查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="查询当事人税务行政记录及详情" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>催欠公告查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="查询当事人是否存在催欠公告行为，以及内容详情" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>网贷逾期查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="查询当事人是否存在网贷逾期行为，以及内容详情" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li class="dele-tc">
+														<em>职业资格认证</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="通过人社部OSTA数据库查询验证证书的有效性" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li class="dele-tc">
+														<em>学历信息查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="适用于2001年之后获得的学历。通过教育部数据库查询验证学校名称、专业、起止时间、学历类型、学历层次、学校是否211或985" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li class="dele-tc">
+														<em>关联投资查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="查询是否存在关联投资记录" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+												</ul>
+												<div class="total"></div>
+											</div>
+											<div class="clearfix"></div>
+											<div class="tcbox-yt">
+												<div class="col-md-4 col-xs-4">
+													<span></span>
+													<p>蓝领工人</p>
+												</div>
+												<div class="col-md-4 col-xs-4">
+													<span></span>
+													<p>保安物业</p>
+												</div>
+												<div class="col-md-4 col-xs-4">
+													<span></span>
+													<p>家政快递</p>
+												</div>
+												<div class="clearfix"></div>
+											</div>
+											<a href="/qrcode-basic.html">下一步</a>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="tcbox tcboxb">
+											<div class="tcbox-tit">标准版</div>
+											<div class="tcbox-box col-md-12">
+												<div class="tcbox-free hidden">奖励
+													<br>80分</div>
+												<ul>
+													<li>
+														<em>身份证号比对</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="通过公安部公民身份信息系统查询，验证身份证信息合法性" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>手机实名比对</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="通过通信运营商数据核实手机号实名情况" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>风险等级评估</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="通过中国大陆公安系统查询犯罪、药物滥用记录时间、内容、宣判单位及刑期" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>司法案例查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="查询当事人是否存在司法案例记录，以及案例详情" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>司法执行查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="通过法院公开诉讼记录数据库查询立案日期、案号、执行法院、执行金额及案件状态" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>司法失信查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="通过法院公开诉讼记录数据库查询立案日期、案号、执行法院、执行情况及文书确定义务" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+
+													<li>
+														<em>税务行政查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="查询当事人税务行政记录及详情" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>催欠公告查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="查询当事人是否存在催欠公告行为，以及内容详情" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>网贷逾期查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="查询当事人是否存在网贷逾期行为，以及内容详情" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>职业资格认证</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="通过人社部OSTA数据库查询验证证书的有效性" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>学历信息查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="适用于2001年之后获得的学历。通过教育部数据库查询验证学校名称、专业、起止时间、学历类型、学历层次、学校是否211或985" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li class="dele-tc">
+														<em>关联投资查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="查询是否存在关联投资记录" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+												</ul>
+												<div class="total"></div>
+											</div>
+											<div class="clearfix"></div>
+											<div class="tcbox-yt tcbox-ytb">
+												<div class="col-md-4 col-md-offset-2 col-xs-4 col-xs-offset-2">
+													<span></span>
+													<p>普通白领</p>
+												</div>
+												<div class="col-md-4 col-xs-4">
+													<span></span>
+													<p>公务人员</p>
+												</div>
+												<div class="clearfix"></div>
+											</div>
+											<a href="/qrcode-standard.html">下一步</a>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="tcbox tcboxc">
+											<div class="tcbox-tit">高级版</div>
+											<div class="tcbox-box col-md-12">
+												<div class="tcbox-free hidden">奖励
+													<br>50分</div>
+												<ul>
+													<li>
+														<em>身份证号比对</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="通过公安部公民身份信息系统查询，验证身份证信息合法性" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>手机实名比对</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="通过通信运营商数据核实手机号实名情况" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>风险等级评估</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="通过中国大陆公安系统查询犯罪、药物滥用记录时间、内容、宣判单位及刑期" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>司法案例查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="查询当事人是否存在司法案例记录，以及案例详情" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>司法执行查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="通过法院公开诉讼记录数据库查询立案日期、案号、执行法院、执行金额及案件状态" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>司法失信查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="通过法院公开诉讼记录数据库查询立案日期、案号、执行法院、执行情况及文书确定义务" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+
+													<li>
+														<em>税务行政查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="查询当事人税务行政记录及详情" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>催欠公告查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="查询当事人是否存在催欠公告行为，以及内容详情" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>网贷逾期查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="查询当事人是否存在网贷逾期行为，以及内容详情" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>职业资格认证</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="通过人社部OSTA数据库查询验证证书的有效性" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>学历信息查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="适用于2001年之后获得的学历。通过教育部数据库查询验证学校名称、专业、起止时间、学历类型、学历层次、学校是否211或985" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+													<li>
+														<em>关联投资查询</em>
+														<i data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="查询是否存在关联投资记录" class="fa fa-info" aria-hidden="true" data-original-title="" title=""></i>
+													</li>
+												</ul>
+												<div class="total"></div>
+											</div>
+											<div class="clearfix"></div>
+											<div class="tcbox-yt tcbox-ytc">
+												<div class="col-md-4 col-xs-4">
+													<span></span>
+													<p>重点岗位</p>
+												</div>
+												<div class="col-md-4 col-xs-4">
+													<span></span>
+													<p>单位高管</p>
+												</div>
+												<div class="col-md-4 col-xs-4">
+													<span></span>
+													<p>公务人员</p>
+												</div>
+												<div class="clearfix"></div>
+											</div>
+											<a href="/qrcode-senior.html">下一步</a>
+										</div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="foot-nav">
+				<footer>
+					<div class="container "><em class="pull-left">注册单位统计：1022</em><em class="pull-right ">忠信信息技术有限公司© <a target="_blank" href="http://icp.chinaz.com/info?q=zxcioc.com">粤ICP备16003933号-2</a></em></div>
+				</footer>
+			</div>
+		</div>
+
+	</body>
+
+</html>

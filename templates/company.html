@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>企业信息认证</title>
+		<link rel="shortcut icon" href="http://avatar.zxcioc.com/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/toastr.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/lib/jquery.min.js" /></script>
+		<script type="text/javascript" src="js/lib/bootstrap.min.js" /></script>
+		<script type="text/javascript" src="js/lib/formValidation.popular.js"></script>
+		<script type="text/javascript" src="js/lib/formValidation.bootstrap.js" /></script>
+		<script type="text/javascript" src="js/lib/formValidator.js"></script>
+		<script type="text/javascript" src="js/lib/underscore.min.js"></script>
+		<script type="text/javascript" src="js/lib/bootstrap-dialog.js"></script>
+		<script type="text/javascript" src="js/lib/jquery.form.js"></script>
+		<script type="text/javascript" src="js/lib/toastr.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/write/head.js"></script>
+		<script type="text/javascript" src="js/write/company.js"></script>
+	</head>
+
+	<body>
+
+		<div class="cont">
+			<div class="main-body">
+				<header>
+					<nav class="navbar navbar-inverse noradius nav-index">
+						<div class="container">
+							<div>
+								<em class="navbar-brand-index welcome hidden-xs">
+					<span id="name"></span>
+					<a href="/company.html"><span class="companyName"></span></a> 
+				</em>
+								<em class="navbar-brand-index welcome hidden-md hidden-sm hidden-lg">您好，尹岳峰</em>
+								<ul class="nav navbar-nav menu-function">
+									<li class="dropdown-nav">
+										<a href="#" class="logout">安全退出</a>
+									</li>
+								</ul>
+							</div>
+
+						</div>
+					</nav>
+				</header>
+				<div class="header">
+					<div class="container container-nopd">
+						<a href="/home.html" class="system-logo"><img src="img/logo-home.jpg" width="116px"></a>
+						<ul class="sys-nav">
+							<li class="">
+								<a href="/home.html">扫码入职</a><em class="hidden-xs"></em></li>
+							<li class="">
+								<a href="/report.html">筛查报告</a>
+							</li>
+							<li class="">
+								<a href="/team.html">职员管理</a>
+							</li>
+						</ul>
+						<ul class="sys-nav sys-nav-mg pull-right">
+							<li class="pull-right hidden">
+								<a href="/work" class="btn btn-style btn-default btn-xs hidden-xs pull-left btn-orange">　快入职　</a>
+							</li>
+							<li class="pull-right hidden">
+								<a href="/work" class="btn btn-style btn-xs hidden-xs pull-left btn-orange">快入职</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="container box">
+
+					<div class="display-table">
+						<div class="display-table-row">
+
+							<div class="col-md-10 col-md-offset-1 col-xs-12" id="pjax_content">
+								<div class="row panel panel-default">
+
+									<div class="panel-body">
+
+										<form class="form-horizontal form-validation information fv-form fv-form-bootstrap" novalidate="novalidate">
+											<fieldset>
+												<div class="row">
+													<div class="col-md-12">
+
+														<div id="errorX"></div>
+
+														<div class="panel-heading-tab">
+															<ul class="nav nav-tabs" role="tablist">
+																<li role="presentation" class="active">
+																	<a href="#" role="tab">企业信息</a>
+																</li>
+															</ul>
+														</div><br /><br /><br />
+
+														<div class="form-group">
+															<label for="companyName" class="col-sm-4 col-xs-12 control-label "><span class="text-danger">*</span> 公司名称:</label>
+															<div class="col-sm-5 col-xs-12">
+																<input type="text" class="form-control" id="companyName" name="companyName" value="" placeholder="请填写公司营业执照上的公司名称全称" required />
+																<div class="row col-sm-12 col-xs-12 form-error text-danger hidden">提示：公司名称不能为空！</div>
+															</div>
+
+														</div>
+
+														<div class="form-group">
+															<label for="compayScale" class="col-sm-4 col-xs-12 control-label "><span class="text-danger">*</span> 企业规模:</label>
+															<div class="col-sm-5 col-xs-12">
+																<select class="form-control" name="compayScale" id="compayScale" data-fv-notempty="true" data-fv-blank="true" data-fv-field="compayScale">
+																	<option value=""></option>
+
+																	<option value="<=100">&lt;=100</option>
+																	<option value="101-300">101-300</option>
+																	<option value="301-1000">301-1000</option>
+																	<option value="1001-3000">1001-3000</option>
+																	<option value="3001-10000">3001-10000</option>
+																	<option value="10001-30000">10001-30000</option>
+																	<option value=">=30001">&gt;=30001</option>
+
+																</select>
+																<small class="help-block" data-fv-validator="blank" data-fv-for="compayScale" data-fv-result="NOT_VALIDATED" style="display: none;">This value is not valid</small><small class="help-block" data-fv-validator="notEmpty" data-fv-for="compayScale" data-fv-result="NOT_VALIDATED" style="display: none;">请填写必填项目</small></div>
+															<div class="col-sm-4 col-xs-12 form-error"></div>
+														</div>
+														<div class="form-group ">
+															<label for="file" class="col-sm-4 col-xs-12 control-label "><span class="text-danger">*</span> 上传营业执照:</label>
+															<div class="col-sm-5 col-xs-12">
+																<div class="">
+																	<input type="file" class="form-control" id="file" name="file" value="" placeholder="请您上传清晰的营业执照" accept="image/jpeg,image/png" data-fv-notempty="true" data-fv-file="true" data-fv-file-extension="jpeg,jpg,png" data-fv-file-type="image/jpeg,image/png" data-fv-file-maxsize="2097152" data-fv-file-message="文件格式或大小不正确" data-fv-blank="true" data-fv-field="file" />
+																	<input type="text" id="businessLicense" name="businessLicense" class="hidden" />
+																</div>
+																<small class="help-block" data-fv-validator="blank" data-fv-for="file" data-fv-result="NOT_VALIDATED" style="display: none;">This value is not valid</small><small class="help-block" data-fv-validator="file" data-fv-for="file" data-fv-result="NOT_VALIDATED" style="display: none;">文件格式或大小不正确</small><small class="help-block" data-fv-validator="notEmpty" data-fv-for="file" data-fv-result="NOT_VALIDATED" style="display: none;">请填写必填项目</small></div>
+															<div class="col-sm-4 col-xs-12 form-error"></div>
+														</div>
+
+														<div class="panel-heading-tab">
+															<ul class="nav nav-tabs" role="tablist">
+																<li role="presentation" class="active">
+																	<a href="#" role="tab">个人信息</a>
+																</li>
+															</ul>
+														</div><br /><br /><br />
+
+														<div class="form-group">
+															<label for="name" class="col-sm-4 col-xs-12 control-label "><span class="text-danger">*</span> 姓名:</label>
+															<div class="col-sm-5 col-xs-12">
+																<input type="text" class="form-control" id="rname" name="name" value="" placeholder="请输入您的真实姓名" required />
+															</div>
+														</div>
+
+														<div class="form-group">
+															<label for="idCard" class="col-sm-4 col-xs-12 control-label "><span class="text-danger">*</span> 身份证号:</label>
+															<div class="col-sm-5 col-xs-12">
+																<input type="text" class="form-control" id="idCard" name="idCard" value="" placeholder="请输入您的身份证号" pattern="^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$|^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$" data-fv-regexp-message="身份证格式不正确" data-fv-notempty="true" data-fv-blank="true" required />
+
+															</div>
+
+														</div>
+
+														<div class="form-group">
+															<label for="dept" class="col-sm-4 col-xs-12 control-label "><span class="text-danger">*</span> 部门:</label>
+															<div class="col-sm-5 col-xs-12">
+																<input type="text" class="form-control" id="dept" name="dept" value="" placeholder="请输入您所在的部门" required />
+
+															</div>
+
+														</div>
+
+														<div class="form-group">
+															<label for="position" class="col-sm-4 col-xs-12 control-label "><span class="text-danger">*</span> 职位:</label>
+															<div class="col-sm-5 col-xs-12">
+																<input type="text" class="form-control" id="position" name="position" value="" placeholder="您担任的职位" required />
+
+															</div>
+
+														</div>
+
+														<div class="row">
+															<div class="col-md-12">
+																<div class="form-group text-center">
+																	<button type="submit" id="submit" class="btn btn-primary btn-orange">提交审核</button>
+																</div>
+															</div>
+														</div>
+
+													</div>
+												</div>
+											</fieldset>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="foot-nav">
+				<footer>
+					<div class="container "><em class="pull-left">注册单位统计：1022</em><em class="pull-right ">忠信信息技术有限公司© <a target="_blank" href="http://icp.chinaz.com/info?q=zxcioc.com">粤ICP备16003933号-2</a></em></div>
+				</footer>
+			</div>
+		</div>
+
+	</body>
+
+</html>

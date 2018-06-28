@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="shortcut icon" href="http://avatar.zxcioc.com/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="css/toastr.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/lib/jquery.min.js" /></script>
+		<script type="text/javascript" src="js/lib/bootstrap.min.js" /></script>
+		<script type="text/javascript" src="js/lib/formValidation.popular.js"></script>
+		<script type="text/javascript" src="js/lib/formValidation.bootstrap.js" /></script>
+		<script type="text/javascript" src="js/lib/formValidator.js"></script>
+		<script type="text/javascript" src="js/lib/toastr.js"></script>
+		<script type="text/javascript" src="js/lib/underscore.min.js"></script>
+		<script type="text/javascript" src="js/lib/bootstrap-dialog.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/write/head.js"></script>
+		<script type="text/javascript" src="js/lib/cropper.min.js" ></script>
+
+	</head>
+
+	<body>
+
+		<div class="cont">
+			<div class="main-body">
+				<header>
+					<nav class="navbar navbar-inverse noradius nav-index">
+						<div class="container">
+							<div>
+								<em class="navbar-brand-index welcome hidden-xs">
+					<span id="name"></span>
+					<a href="/personal.html"><span class="companyName"></span></a> 
+				</em>
+								<em class="navbar-brand-index welcome hidden-md hidden-sm hidden-lg">您好，尹岳峰</em>
+								<ul class="nav navbar-nav menu-function">
+									<li class="dropdown-nav">
+										<a href="#" class="logout">安全退出</a>
+									</li>
+								</ul>
+							</div>
+
+						</div>
+					</nav>
+				</header>
+				<div class="header">
+					<div class="container container-nopd">
+						<a href="/home.html" class="system-logo"><img src="img/logo-home.jpg" width="116px"></a>
+						<ul class="sys-nav">
+							<li class="">
+								<a href="/home.html">扫码入职</a><em class="hidden-xs"></em></li>
+							<li class="">
+								<a href="/report.html">筛查报告</a>
+							</li>
+							<li class="">
+								<a href="/team.html">职员管理</a>
+							</li>
+						</ul>
+						<ul class="sys-nav sys-nav-mg pull-right">
+							<li class="pull-right hidden">
+								<a href="/work" class="btn btn-style btn-default btn-xs hidden-xs pull-left btn-orange">　快入职　</a>
+							</li>
+							<li class="pull-right hidden">
+								<a href="/work" class="btn btn-style btn-xs hidden-xs pull-left btn-orange">快入职</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="container box">
+
+					<div class="display-table">
+						<div class="display-table-row">
+
+							<div class="col-md-10 col-md-offset-1 col-xs-12" id="pjax_content">
+								<div class="row panel panel-default">
+									<div class="panel-heading">
+
+										个人信息
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="information">
+													<div class="infor-head">
+														<div class="infor-img pull-left">
+															<a id="replaceImg">设置头像</a><img id="finalImg" src="img/userimg.jpg"></div>
+
+														<!--图片裁剪框 start-->
+														<div style="display: none" class="tailoring-container">
+															<div class="black-cloth" onclick="closeTailor(this)"></div>
+															<div class="tailoring-content" style="top: -135px; left: 426.5px;">
+																<div class="tailoring-content-one">
+																	<label title="上传图片" for="chooseImg" class="l-btn choose-btn">
+				                    <input type="file" accept="image/jpg,image/jpeg,image/png" name="file" id="chooseImg" class="hidden" onchange="selectImg(this)">
+				                    选择图片
+				                </label>
+																	<div class="close-tailoring" onclick="closeTailor(this)">×</div>
+																</div>
+																<div class="tailoring-content-two">
+																	<div class="tailoring-box-parcel">
+																		<img id="tailoringImg">
+																	</div>
+																	<div class="preview-box-parcel">
+																		<p>头像预览：</p>
+																		<div class="circular previewImg"></div>
+																		<div class="square previewImg"></div>
+
+																	</div>
+																</div>
+																<div class="tailoring-content-three">
+																	<button class="l-btn cropper-reset-btn">复位</button>
+																	<button class="l-btn cropper-rotate-btn">旋转</button>
+																	<button class="l-btn cropper-scaleX-btn">换向</button>
+																	<button class="l-btn sureCut" id="sureCut">确定</button>
+																</div>
+															</div>
+														</div>
+														<!--图片裁剪框 end-->
+
+														<div class="infor-txt pull-left">
+															<a>  <!-- href="http://www.zxcioc.com" target="_Blank" -->
+																<h3 class="myName"></h3></a>
+															<span class="label label-success" id="isCertified">已审核</span>
+														</div>
+													</div>
+													<div class="infor-box">
+														<div class="infor-tit">个人信息　<a href="personal-edit.html" class="text-info">修改</a></div>
+														<div class="row">
+															<div class="col-md-2">真实姓名</div>
+															<div class="col-md-10 myName"> </div>
+															</div>
+															<div class="row">
+															<div class="col-md-2">身份证号</div>
+															<div class="col-md-10" id="idCard"> </div>
+															</div>
+															<div class="row">
+															<div class="col-md-2">所在部门</div>
+															<div class="col-md-10" id="dept"> </div>
+															</div>
+															<div class="row">
+															<div class="col-md-2">担任职位</div>
+															<div class="col-md-10" id="position"> </div>
+															</div>
+															<div class="row">
+															<div class="col-md-2">录入日期</div>
+															<div class="col-md-10" id="entryDate"> </div>
+															</div>
+															<br /><br />
+															<div class="infor-tit">企业信息</div>
+															<div class="row">
+															<div class="col-md-2">公司全称</div>
+															<div class="col-md-10" id="companyname"> </div>
+															</div>
+															<div class="row">
+															<div class="col-md-2">统一社会信用代码</div>
+															<div class="col-md-10" id="creditCode"> </div>
+															</div>
+															<div class="row">
+															<div class="col-md-2">所属行业</div>
+															<div class="col-md-10" id="industry"> </div>
+															</div>
+															<div class="row">
+															<div class="col-md-2">企业规模</div>
+															<div class="col-md-10" id="compayScale"> </div>
+															</div>
+															<div class="row">
+															<div class="col-md-2">注册地址</div>
+															<div class="col-md-10" id="regLocation"> </div>
+															</div>
+															<div class="row">
+															<div class="col-md-2">营业执照</div>
+															<div class="col-md-10">
+																<a id="businessLicense" style="border-bottom: dashed 1px #0088cc;" class="link" data-container="body" data-toggle="popover" data-placement="right" data-html="true" data-trigger="focus" tabindex="0" role="button">点击查看</a>
+															</div>
+															</div>
+
+														
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			<div class="foot-nav ">
+				<footer>
+					<div class="container "><em class="pull-left">注册单位统计：1022</em><em class="pull-right ">忠信信息技术有限公司© <a target="_blank" href="http://icp.chinaz.com/info?q=zxcioc.com">粤ICP备16003933号-2</a></em></div>
+				</footer>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/write/personal.js"></script>
+	</body>
+
+</html>
